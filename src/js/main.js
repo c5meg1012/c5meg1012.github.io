@@ -2,36 +2,18 @@
 
 import $ from 'jquery';
 import Sign from './sign/';
+import Select from './select/';
+import SwitchFade from './switch/';
+import BackFade from './back/';
 
 const sign = new Sign();
-
-/*
- Setup and Paint your lazyline!
- */
+const select = new Select();
+const switchFade = new SwitchFade();
+const backFade = new BackFade();
 
 $(function(){
-
   sign.playSign();
-
-  setTimeout(function(){
-    $('#js_sign').fadeOut();
-  },1500);
-
-  setTimeout(function(){
-    $('#js_select').fadeIn();
-  },2000);
-
-  $('#js_engineer').on('click',function(){
-     $('#js_select').fadeOut();
-     setTimeout(function(){
-       $('#js_engineer_detail').fadeIn();
-     },500);
-  });
-
-  $('#js_musician').on('click',function(){
-     $('#js_select').fadeOut();
-     setTimeout(function(){
-       $('#js_musician_detail').fadeIn();
-     },500);
-  });
+  select.selectMeru();
+  switchFade.playSwitch();
+  backFade.backToSelect();
 });

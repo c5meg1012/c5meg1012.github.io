@@ -11145,6 +11145,48 @@ return jQuery;
 },{}],3:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = require('jquery');
+
+var backFade = function () {
+  function backFade() {
+    _classCallCheck(this, backFade);
+
+    this.backButton = $('.js_back');
+    this.detail = $('.js_detail');
+    this.select = $('#js_select');
+  }
+
+  _createClass(backFade, [{
+    key: 'backToSelect',
+    value: function backToSelect() {
+      var _this = this;
+
+      this.backButton.on('click', function () {
+        _this.detail.fadeOut();
+
+        setTimeout(function () {
+          _this.select.fadeIn();
+        }, 500);
+      });
+    }
+  }]);
+
+  return backFade;
+}();
+
+exports.default = backFade;
+
+},{"jquery":1}],4:[function(require,module,exports){
+'use strict';
+
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11153,42 +11195,96 @@ var _sign = require('./sign/');
 
 var _sign2 = _interopRequireDefault(_sign);
 
+var _select = require('./select/');
+
+var _select2 = _interopRequireDefault(_select);
+
+var _switch = require('./switch/');
+
+var _switch2 = _interopRequireDefault(_switch);
+
+var _back = require('./back/');
+
+var _back2 = _interopRequireDefault(_back);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var sign = new _sign2.default();
-
-/*
- Setup and Paint your lazyline!
- */
+var select = new _select2.default();
+var switchFade = new _switch2.default();
+var backFade = new _back2.default();
 
 (0, _jquery2.default)(function () {
-
   sign.playSign();
-
-  setTimeout(function () {
-    (0, _jquery2.default)('#js_sign').fadeOut();
-  }, 1500);
-
-  setTimeout(function () {
-    (0, _jquery2.default)('#js_select').fadeIn();
-  }, 2000);
-
-  (0, _jquery2.default)('#js_engineer').on('click', function () {
-    (0, _jquery2.default)('#js_select').fadeOut();
-    setTimeout(function () {
-      (0, _jquery2.default)('#js_engineer_detail').fadeIn();
-    }, 500);
-  });
-
-  (0, _jquery2.default)('#js_musician').on('click', function () {
-    (0, _jquery2.default)('#js_select').fadeOut();
-    setTimeout(function () {
-      (0, _jquery2.default)('#js_musician_detail').fadeIn();
-    }, 500);
-  });
+  select.selectMeru();
+  switchFade.playSwitch();
+  backFade.backToSelect();
 });
 
-},{"./sign/":4,"jquery":1}],4:[function(require,module,exports){
+},{"./back/":3,"./select/":5,"./sign/":6,"./switch/":8,"jquery":1}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = require('jquery');
+
+var Select = function () {
+  function Select() {
+    _classCallCheck(this, Select);
+
+    this.select = $('#js_select');
+    this.selectButton = $('.js_select_meru');
+    this.engineerDetail = $('#js_engineer_detail');
+    this.musicianDetail = $('#js_musician_detail');
+  }
+
+  _createClass(Select, [{
+    key: 'selectMeru',
+    value: function selectMeru() {
+      var _this = this;
+
+      this.selectButton.on('click', function (e) {
+        _this.select.fadeOut();
+
+        if ($(e.target).hasClass('js_select_engineer')) {
+          _this.selectEngineer();
+        } else {
+          _this.selectMusician();
+        }
+      });
+    }
+  }, {
+    key: 'selectEngineer',
+    value: function selectEngineer() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.engineerDetail.fadeIn();
+      }, 500);
+    }
+  }, {
+    key: 'selectMusician',
+    value: function selectMusician() {
+      var _this3 = this;
+
+      setTimeout(function () {
+        _this3.musicianDetail.fadeIn();
+      }, 500);
+    }
+  }]);
+
+  return Select;
+}();
+
+exports.default = Select;
+
+},{"jquery":1}],6:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -11230,7 +11326,7 @@ var Sign = function () {
 exports.default = Sign;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./path":5,"jquery":1,"lazy-line-painter":2}],5:[function(require,module,exports){
+},{"./path":7,"jquery":1,"lazy-line-painter":2}],7:[function(require,module,exports){
 'use strict';
 
 var pathObj = {
@@ -11257,4 +11353,45 @@ var pathObj = {
 
 module.exports = pathObj;
 
-},{}]},{},[3]);
+},{}],8:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = require('jquery');
+
+var SwitchFade = function () {
+  function SwitchFade() {
+    _classCallCheck(this, SwitchFade);
+
+    this.sign = $('#js_sign');
+    this.select = $('#js_select');
+  }
+
+  _createClass(SwitchFade, [{
+    key: 'playSwitch',
+    value: function playSwitch() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.sign.fadeOut();
+      }, 1500);
+
+      setTimeout(function () {
+        _this.select.fadeIn();
+      }, 2000);
+    }
+  }]);
+
+  return SwitchFade;
+}();
+
+exports.default = SwitchFade;
+
+},{"jquery":1}]},{},[4]);
