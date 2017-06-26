@@ -4,15 +4,27 @@ export default class SwitchFade {
   constructor () {
     this.sign = $('#js_sign');
     this.select = $('#js_select');
+    this.backButton = $('.js_back');
+    this.detail = $('.js_detail');
   }
 
-  playSwitch() {
+  firstSwitch() {
     setTimeout(() => {
-      this.sign.fadeOut();
+      $.when(
+        this.sign.fadeOut()
+      ).done (() => {
+        this.select.fadeIn();
+      });
     },1500);
+  }
 
-    setTimeout(() => {
-      this.select.fadeIn();
-    },2000);
+  backSwitch() {
+    this.backButton.on('click', () => {
+      $.when(
+        this.detail.fadeOut()
+      ).done (() => {
+        this.select.fadeIn();
+      });
+    });
   }
 }

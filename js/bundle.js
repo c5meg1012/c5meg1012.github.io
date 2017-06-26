@@ -11145,48 +11145,6 @@ return jQuery;
 },{}],3:[function(require,module,exports){
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = require('jquery');
-
-var backFade = function () {
-  function backFade() {
-    _classCallCheck(this, backFade);
-
-    this.backButton = $('.js_back');
-    this.detail = $('.js_detail');
-    this.select = $('#js_select');
-  }
-
-  _createClass(backFade, [{
-    key: 'backToSelect',
-    value: function backToSelect() {
-      var _this = this;
-
-      this.backButton.on('click', function () {
-        _this.detail.fadeOut();
-
-        setTimeout(function () {
-          _this.select.fadeIn();
-        }, 500);
-      });
-    }
-  }]);
-
-  return backFade;
-}();
-
-exports.default = backFade;
-
-},{"jquery":1}],4:[function(require,module,exports){
-'use strict';
-
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11203,25 +11161,20 @@ var _switch = require('./switch/');
 
 var _switch2 = _interopRequireDefault(_switch);
 
-var _back = require('./back/');
-
-var _back2 = _interopRequireDefault(_back);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var sign = new _sign2.default();
 var select = new _select2.default();
 var switchFade = new _switch2.default();
-var backFade = new _back2.default();
 
 (0, _jquery2.default)(function () {
   sign.playSign();
+  switchFade.firstSwitch();
+  switchFade.backSwitch();
   select.selectMeru();
-  switchFade.playSwitch();
-  backFade.backToSelect();
 });
 
-},{"./back/":3,"./select/":5,"./sign/":6,"./switch/":8,"jquery":1}],5:[function(require,module,exports){
+},{"./select/":4,"./sign/":5,"./switch/":7,"jquery":1}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11250,32 +11203,19 @@ var Select = function () {
       var _this = this;
 
       this.selectButton.on('click', function (e) {
-        _this.select.fadeOut();
-
-        if ($(e.target).hasClass('js_select_engineer')) {
-          _this.selectEngineer();
-        } else {
-          _this.selectMusician();
-        }
+        $.when(_this.select.fadeOut()).done(function () {
+          _this.showMeru(e.target);
+        });
       });
     }
   }, {
-    key: 'selectEngineer',
-    value: function selectEngineer() {
-      var _this2 = this;
-
-      setTimeout(function () {
-        _this2.engineerDetail.fadeIn();
-      }, 500);
-    }
-  }, {
-    key: 'selectMusician',
-    value: function selectMusician() {
-      var _this3 = this;
-
-      setTimeout(function () {
-        _this3.musicianDetail.fadeIn();
-      }, 500);
+    key: 'showMeru',
+    value: function showMeru(target) {
+      if ($(target).hasClass('js_select_engineer')) {
+        this.engineerDetail.fadeIn();
+      } else {
+        this.musicianDetail.fadeIn();
+      }
     }
   }]);
 
@@ -11284,7 +11224,7 @@ var Select = function () {
 
 exports.default = Select;
 
-},{"jquery":1}],6:[function(require,module,exports){
+},{"jquery":1}],5:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -11326,7 +11266,7 @@ var Sign = function () {
 exports.default = Sign;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./path":7,"jquery":1,"lazy-line-painter":2}],7:[function(require,module,exports){
+},{"./path":6,"jquery":1,"lazy-line-painter":2}],6:[function(require,module,exports){
 'use strict';
 
 var pathObj = {
@@ -11353,7 +11293,7 @@ var pathObj = {
 
 module.exports = pathObj;
 
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11372,20 +11312,31 @@ var SwitchFade = function () {
 
     this.sign = $('#js_sign');
     this.select = $('#js_select');
+    this.backButton = $('.js_back');
+    this.detail = $('.js_detail');
   }
 
   _createClass(SwitchFade, [{
-    key: 'playSwitch',
-    value: function playSwitch() {
+    key: 'firstSwitch',
+    value: function firstSwitch() {
       var _this = this;
 
       setTimeout(function () {
-        _this.sign.fadeOut();
+        $.when(_this.sign.fadeOut()).done(function () {
+          _this.select.fadeIn();
+        });
       }, 1500);
+    }
+  }, {
+    key: 'backSwitch',
+    value: function backSwitch() {
+      var _this2 = this;
 
-      setTimeout(function () {
-        _this.select.fadeIn();
-      }, 2000);
+      this.backButton.on('click', function () {
+        $.when(_this2.detail.fadeOut()).done(function () {
+          _this2.select.fadeIn();
+        });
+      });
     }
   }]);
 
@@ -11394,4 +11345,4 @@ var SwitchFade = function () {
 
 exports.default = SwitchFade;
 
-},{"jquery":1}]},{},[4]);
+},{"jquery":1}]},{},[3]);

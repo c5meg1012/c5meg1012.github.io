@@ -10,25 +10,19 @@ export default class Select {
 
   selectMeru() {
     this.selectButton.on('click', (e) => {
-      this.select.fadeOut();
-
-      if ($(e.target).hasClass('js_select_engineer')) {
-        this.selectEngineer();
-      } else {
-        this.selectMusician();
-      }
+      $.when(
+        this.select.fadeOut()
+      ).done (() => {
+        this.showMeru(e.target);
+      });
     });
   }
 
-  selectEngineer() {
-    setTimeout(() => {
+  showMeru(target) {
+    if ($(target).hasClass('js_select_engineer')) {
       this.engineerDetail.fadeIn();
-    },500);
-  }
-
-  selectMusician() {
-    setTimeout(() => {
+    } else {
       this.musicianDetail.fadeIn();
-    },500);
+    }
   }
 }
