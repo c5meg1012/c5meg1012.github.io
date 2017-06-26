@@ -1,0 +1,7 @@
+html {
+  font-family: "Mplus 1p";
+}
+
+#js_select,#js_engineer_detail,#js_musician_detail {
+  display: none;
+}

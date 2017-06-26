@@ -1,14 +1,7 @@
-/*
- * Lazy Line Painter - Path Object
- * Generated using 'SVG to Lazy Line Converter'
- *
- * http://lazylinepainter.info
- * Copyright 2013, Cam O'Connell
- *
- */
+'use strict';
 
-var pathObj = {
-    "top": {
+const pathObj = {
+    "js_sign": {
         "strokepath": [
             {
                 "path": "M91.2,54.4c1.5,38.7,13.6,76.9,34.5,109.5",
@@ -34,38 +27,4 @@ var pathObj = {
     }
 };
 
-
-/*
- Setup and Paint your lazyline!
- */
-
-$(document).ready(function(){
-  $('#top').lazylinepainter({
-    "svgData": pathObj,
-    "strokeWidth": 2,
-    "strokeColor": "#e09b99",
-    "speedMultiplier": .5
-  }).lazylinepainter('paint');
-
-  setTimeout(function(){
-    $('#top').fadeOut();
-  },1500);
-
-  setTimeout(function(){
-    $('#main').fadeIn();
-  },2000);
-
-  $('#engineer').on('click',function(){
-     $('#main').fadeOut();
-     setTimeout(function(){
-       $('#engineer_meru').fadeIn();
-     },500);
-  });
-
-  $('#musician').on('click',function(){
-     $('#main').fadeOut();
-     setTimeout(function(){
-       $('#musician_meru').fadeIn();
-     },500);
-  });
-});
+module.exports = pathObj;
