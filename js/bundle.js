@@ -11253,8 +11253,8 @@ var Sign = function () {
     value: function playSign() {
       this.signBox.lazylinepainter({
         "svgData": pathObj,
-        "strokeWidth": 2,
-        "strokeColor": "#e09b99",
+        "strokeWidth": 4,
+        "strokeColor": "#000",
         "speedMultiplier": .5
       }).lazylinepainter('paint');
     }
