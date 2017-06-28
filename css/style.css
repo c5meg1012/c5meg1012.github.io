@@ -182,6 +182,35 @@ strong {
   margin-right: .25rem;
 }
 
+.m_list {
+  line-height: 1.5;
+}
+
+.m_list .group {
+  margin: 1.75rem 0;
+}
+
+.m_list .group:first-child {
+  margin-top: 0;
+}
+
+.m_list .group:last-child {
+  margin-bottom: 0;
+}
+
+.m_list .item {
+  margin-bottom: .75rem;
+}
+
+.m_list a {
+  color: #000;
+}
+
+.m_list a:hover {
+  opacity: .5;
+  transition: all .4s;
+}
+
 .m_select_button {
   display: table;
   width: 99%;
@@ -282,6 +311,10 @@ strong {
 
   .m_links .fa {
     font-size: 1rem;
+  }
+
+  .m_list .item {
+    margin-bottom: .5rem;
   }
 
   .m_select_button .image {
