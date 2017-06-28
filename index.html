@@ -7,115 +7,276 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
   <body>
+
     <div id="js_sign"></div>
-    <div id="js_select">
-      あなたが探しているのは、どちらですか？
-      <br />
-      <br />
-      <span class="js_select_meru js_select_engineer">・ エンジニアの める</span>
-      <br />
-      <span class="js_select_meru js_select_musician">・ クラリネット奏者の める</span>
-    </div>
-    <div id="js_engineer_detail" class="js_detail">
-      <h1>Megumi Mochizuki / Meru</h1>
-      <br />
-      1991年10月12日生、神奈川県小田原市出身。<br />
-      大学では演劇映像を専門に学ぶ一方、自由科目でJavaとPHPを学ぶ。<br />
-      アイコンはペンタブで自作。<br />
-      <br />
-      <h2>株式会社プレート</h2>
-      2015年1月〜2016年10月<br />
-      <br />
-      受託・Web制作会社。未経験であったがコーダーとしてアルバイト入社、3ヶ月で正社員昇格。<br />
-      初めて担当した実務案件で、なぜかWordpress投稿機能のView側出力を実装することになり、そこからコーダーの範疇を超えて、jQueryはもちろんWordpressのオリジナルテーマ作成を中心に業務を行う。<br />
-      その後、ベトナムオフショア開発のディレクション、大規模Wordpress構築/運用を経て、エンジニア部署に異動。<br />
-      データベース周りやPHPを中心に勉強したのち、Wordpressのカスタムフィールド実装、LPの申し込みフォーム開発(cakephp)、jQueryValidateを用いたフォーム開発、営業支援システム(Laravel)の設計、与信管理システム(Laravel)の開発、EC-CUBE3系(Symfony2)の開発を行った。<br />
-      また、社内ではエンジニア勉強会、SlackBot、Slack Channel(それまでSlackはDMが主だった)、PullRequestの導入を行った。<br />
-      <br />
-      <h2>株式会社リスタ</h2>
-      2016年11月〜現在<br />
-      <br />
-      たった3人だった少数精鋭の会社に飛び込み、2人目のエンジニアとして入社。<br />
-      Ruby on Railsで、フロント側の実装とデザインを中心に、自社サービスの開発を行っている。<br />
-      <br />
-      フロント側では、構築当時のままで運用のしにくかったCSSの設計をやり直し、ドキュメントの作成を行なった。今はリファクタリングも2周目に入って、SMACSSに寄せながらOOCSSっぽく書いている。<br />
-      <br />
-      また、UI/UX改善のためのデータをGoogle Analyticsで取りながら、CV率UPのために試行錯誤している。今は当初の5倍くらいになった。<br />
-      <br />
-      プライベートでは、友人の会社HPでWordpressのテーマを作ったり、ES6、Node.js、Vue.js、React.js、Three.jsなどのJavaScriptを中心に勉強中。
-      <br />
-      <a href="https://www.facebook.com/c5meg1012" target="_blank">
-        <span class="fa fa-facebook-square"></span>
-        Facebook
-      </a>
-      <br />
-      <a href="https://twitter.com/c5meru" target="_blank">
-        <span class="fa fa-twitter-square"></span>
-        Twitter
-      </a>
-      <br />
-      <a href="https://github.com/c5meg1012" target="_blank">
-        <span class="fa fa-github-alt"></span>
-        Github
-      </a>
-      <br />
-      <span class="js_back">もどる</span>
-    </div>
-    <div id="js_musician_detail" class="js_detail">
-      <h1>Megumi Nakayama / Meru</h1>
-      <br />
-      1991年10月12日生、神奈川県小田原市出身。<br />
-      中学より部活動にてクラリネットを始める。
-      <br />
-      高校ではバスクラリネットを兼任し、モーツァルトやシューマン等のオケ編作品に多く取り組む一方、週末は都内に移動し、V★P吹奏楽団ならびにWeed Wind Orchestraに参加、吹奏楽曲にも取り組んだ。
-      <br />
-      大学では演劇映像を専門に学ぶ一方、早稲田大学交響楽団に参加、1st奏者として数多くのステージに立つほか、海外公演「ヨーロッパツアー2012」にてインスペクターを務めた。神奈川フィルハーモニー管弦楽団クラリネット首席奏者である齋藤雄介氏に師事。
-      <br />
-      卒業後は、ミュージックエイトが販売する楽譜のデモ録音に参加。また、ファミコンバンド・熱血高校吹奏楽部にて、ゲーム音楽演奏にも参加する。<br />
-      2015年度には、ロッチウィンドアンサンブルとして、クラリネット4重奏で全日本アンサンブルコンテスト金賞を受賞。 <br />
-      最近は歳を取ったせいか、メロディーラインよりオブリガードや内声の方が楽しい。<br />
-      <br />
-      <a href="https://www.facebook.com/c5meg1012" target="_blank">
-        <span class="fa fa-facebook-square"></span>
-        Facebook
-      </a>
-      <br />
-      <a href="https://twitter.com/c5meru" target="_blank">
-        <span class="fa fa-twitter-square"></span>
-        Twitter
-      </a>
-      <br />
-      <a href="https://www.instagram.com/c5meru/" target="_blank">
-        <span class="fa fa-instagram"></span>
-        Instagram
-      </a>
-      <br />
 
-      <h2>参加作品</h2>
+    <div id="js_select" class="l_select">
+      <div class="question">あなたが探しているのは、どちらですか？</div>
 
-      <a href="https://www.youtube.com/watch?v=_HVOd7kSC7Y" target="_blank">混色のマテリア / ロッチウインドアンサンブル</a><br />
-      <br />
-      <a href="http://www.nicovideo.jp/watch/sm28244242" target="_blank">「ハルチカ～ハルタとチカは青春する～」より「虹を編めたら」 / 秋葉原区立すいそうがく団！（エキストラ）</a><br />
-      <br />
-      <a href="http://www.nicovideo.jp/watch/sm27822590" target="_blank">カエルの為に鐘は鳴る / 熱血高校吹奏楽部（2nd）</a><br />
-      <a href="http://www.nicovideo.jp/watch/sm27822644" target="_blank">スーパーマリオワールド / 熱血高校吹奏楽部（2nd）</a><br />
-      <a href="http://www.nicovideo.jp/watch/sm27822660" target="_blank">アクトレイザー / 熱血高校吹奏楽部（4th）</a><br />
-      <a href="http://www.nicovideo.jp/watch/sm27822616" target="_blank">テトリス2 + ボンブリス / 熱血高校吹奏楽部（1st）</a><br />
-      <a href="http://www.nicovideo.jp/watch/sm27822675" target="_blank">FinalFantasyX / 熱血高校吹奏楽部（編曲原案作成、4th）</a><br />
-      <br />
-      <a href="https://www.youtube.com/watch?v=VvLuRwB7C-o" target="_blank">Dragon Night / M8ウインドオーケストラ</a><br />
-      <a href="https://www.youtube.com/watch?v=hprIYEySzvw" target="_blank">ありのままで【Let It Go】 / M8ウインドオーケストラ</a><br />
-      <a href="https://www.youtube.com/watch?v=PyZBKGJ8kkM" target="_blank">チャンパカーナ / M8ウインドオーケストラ</a><br />
-      <br />
-      <a href="https://www.youtube.com/watch?v=tjQIq8tuHHc" target="_blank">組曲「万象の中へ」1.龍の目覚め / Weed Wind Orchestra</a><br />
-      <a href="https://www.youtube.com/watch?v=dU7G3hOe__s" target="_blank">組曲「万象の中へ」2.憂いの湖 / Weed Wind Orchestra</a><br />
-      <a href="https://www.youtube.com/watch?v=m7Y_LmUmV88" target="_blank">組曲「万象の中へ」3.地気の鼓動 / Weed Wind Orchestra</a><br />
-      <a href="https://www.youtube.com/watch?v=ea4Mi9pPn_o" target="_blank">組曲「万象の中へ」4.青嵐 / Weed Wind Orchestra</a><br />
-      <br />
-      <a href="http://www.nicovideo.jp/watch/nm6512450" target="_blank">吹奏楽のための民話 / V★P吹奏楽団</a><br />
-      <a href="http://www.nicovideo.jp/watch/nm4433164" target="_blank">K点を越えて / V★P吹奏楽団</a><br />
-      <a href="http://www.nicovideo.jp/watch/nm4433324" target="_blank">CENTURIA / V★P吹奏楽団</a><br />
-      <span class="js_back">もどる</span>
+      <div class="button_box">
+        <div class="item">
+          <div class="m_select_button engineer js_select_meru js_select_engineer">
+            <img class="image" src="img/avatar_white.jpg" alt="engineer meru">
+            <span class="label">エンジニアの める</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="m_select_button musician js_select_meru js_select_musician">
+            <img class="image" src="img/avatar_black.jpg" alt="musician meru">
+            <span class="label">クラリネット奏者の める</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="js_engineer_detail" class="l_detail js_detail">
+      <header class="m_detail_header">
+        <img class="image" src="img/keyboard.jpg" alt="もちづき めぐみ（める）">
+      </header>
+
+      <div class="l_boxes">
+        <div class="box">
+          <div class="box_body">
+            <div class="m_sentence">
+              <p>
+                1991年10月12日生、神奈川県小田原市出身。<br />
+                大学では演劇映像を専門に学ぶ一方、自由科目でJavaとPHPを学ぶ。<br />
+                先ほどのアイコンはペンタブで自作。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_header">
+            <div class="title">株式会社プレート</div>
+            <div class="title_sub">2015年1月〜2016年10月</div>
+          </div>
+          <div class="box_body">
+            <div class="m_sentence">
+              <p>
+                受託・Web制作会社。未経験であったがコーダーとしてアルバイト入社、3ヶ月で正社員昇格。<br />
+                初めて担当した実務案件で、なぜかWordpress投稿機能のView側出力を実装することになり、そこからコーダーの範疇を超えて、jQueryはもちろんWordpressのオリジナルテーマ作成を中心に業務を行う。
+              </p>
+              <p>
+                その後、ベトナムオフショア開発のディレクション、大規模Wordpress構築/運用を経て、エンジニア部署に異動。<br />
+                データベース周りやPHPを中心に勉強したのち、Wordpressのカスタムフィールド実装、LPの申し込みフォーム開発(cakephp)、jQueryValidateを用いたフォーム開発、営業支援システム(Laravel)の設計、与信管理システム(Laravel)の開発、EC-CUBE3系(Symfony2)の開発を行った。
+              </p>
+              <p>
+                また、社内ではエンジニア勉強会、SlackBot、Slack Channel(それまでSlackはDMが主だった)、PullRequestの導入を行った。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_header">
+            <div class="title">株式会社リスタ</div>
+            <div class="title_sub">2016年11月〜現在</div>
+          </div>
+          <div class="box_body">
+            <div class="m_sentence">
+              <p>
+                たった3人だった少数精鋭の会社に飛び込み、2人目のエンジニアとして入社。<br />
+                Ruby on Railsで、フロント側の実装とデザインを中心に、自社サービスの開発を行っている。<br />
+              </p>
+              <p>
+                フロント側では、構築当時のままで運用のしにくかったCSSの設計をやり直し、ドキュメントの作成を行なった。今はリファクタリングも2周目に入って、SMACSSに寄せながらOOCSSっぽく書いている。<br />
+                最近は（脱CoffeeScriptを目論みながら）CoffeeScriptの整理も行っている。
+              </p>
+              <p>
+                また、UI/UX改善のため、データをGoogle Analyticsで取りながら、CV率UPのために試行錯誤している。今は当初の5倍くらいになった。<br />
+              </p>
+              <p>
+                プライベートでは、友人の会社HPでWordpressのテーマを作ったり、ES6、Node.js、Vue.js、React.js、Three.jsなどのJavaScriptを中心に勉強中。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_body">
+            <div class="m_links">
+              <div class="item">
+                <a href="https://www.facebook.com/c5meg1012" target="_blank">
+                  <span class="fa fa-facebook-square"></span>
+                  Facebook
+                </a>
+              </div>
+              <div class="item">
+                <a href="https://twitter.com/c5meru" target="_blank">
+                  <span class="fa fa-twitter-square"></span>
+                  Twitter
+                </a>
+              </div>
+              <div class="item">
+                <a href="https://github.com/c5meg1012" target="_blank">
+                  <span class="fa fa-github-alt"></span>
+                  Github
+                </a>
+              </div>
+              <div class="item">
+                <a href="http://c5meru.hatenablog.jp/" target="_blank">
+                  <span class="fa fa-pencil"></span>
+                  hatena blog
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_body">
+            <div class="m_back">
+              <div class="button js_back">
+                <span class="fa fa-chevron-left"></span>
+                もどる
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="js_musician_detail" class="l_detail js_detail">
+      <header class="m_detail_header">
+        <img class="image" src="img/clarinet.jpg" alt="Megumi Nakayama（める）">
+      </header>
+
+      <div class="l_boxes">
+        <div class="box">
+          <div class="box_body">
+            <div class="m_sentence">
+              <p>
+                1991年10月12日生、神奈川県小田原市出身。<br />
+                中学より部活動にてクラリネットを始める。
+              </p>
+              <p>
+                高校ではバスクラリネットを兼任し、モーツァルトやシューマン等のオケ編作品に多く取り組む一方、週末は都内に移動し、V★P吹奏楽団ならびにWeed Wind Orchestraに参加、吹奏楽曲にも取り組んだ。
+              </p>
+              <p>
+                大学では演劇映像を専門に学ぶ一方、早稲田大学交響楽団に参加、1st奏者として数多くのステージに立つほか、海外公演「ヨーロッパツアー2012」にてインスペクターを務めた。神奈川フィルハーモニー管弦楽団クラリネット首席奏者である齋藤雄介氏に師事。
+              </p>
+              <p>
+                卒業後は、ミュージックエイトが販売する楽譜のデモ録音に参加。また、ファミコンバンド・熱血高校吹奏楽部にて、ゲーム音楽演奏にも参加する。<br />
+                2015年度には、ロッチウィンドアンサンブルとして、クラリネット4重奏で全日本アンサンブルコンテスト金賞を受賞。 <br />
+              </p>
+              <p>
+                最近は歳を取ったせいか、メロディーラインよりオブリガードや内声の方が楽しい。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_body">
+            <div class="m_links">
+              <div class="item">
+                <a href="https://www.facebook.com/c5meg1012" target="_blank">
+                  <span class="fa fa-facebook-square"></span>
+                  Facebook
+                </a>
+              </div>
+              <div class="item">
+                <a href="https://twitter.com/c5meru" target="_blank">
+                  <span class="fa fa-twitter-square"></span>
+                  Twitter
+                </a>
+              </div>
+              <div class="item">
+                <a href="https://www.instagram.com/c5meru/" target="_blank">
+                  <span class="fa fa-instagram"></span>
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_body">
+            <div class="m_back">
+              <div class="button js_back">
+                <span class="fa fa-chevron-left"></span>
+                もどる
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box_header">
+            <div class="title">参加作品</div>
+          </div>
+          <div class="box_body">
+            <div class="m_list">
+              <div class="group">
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=_HVOd7kSC7Y" target="_blank">混色のマテリア / ロッチウインドアンサンブル</a>
+                </div>
+              </div>
+              <div class="group">
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm28244242" target="_blank">「ハルチカ～ハルタとチカは青春する～」より「虹を編めたら」 / 秋葉原区立すいそうがく団！（エキストラ）</a>
+                </div>
+              </div>
+              <div class="group">
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm27822590" target="_blank">カエルの為に鐘は鳴る / 熱血高校吹奏楽部（2nd）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm27822644" target="_blank">スーパーマリオワールド / 熱血高校吹奏楽部（2nd）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm27822660" target="_blank">アクトレイザー / 熱血高校吹奏楽部（4th）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm27822616" target="_blank">テトリス2 + ボンブリス / 熱血高校吹奏楽部（1st）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/sm27822675" target="_blank">FinalFantasyX / 熱血高校吹奏楽部（編曲原案作成、4th）</a>
+                </div>
+              </div>
+              <div class="group">
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=VvLuRwB7C-o" target="_blank">Dragon Night / M8ウインドオーケストラ</a>
+                </div>
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=hprIYEySzvw" target="_blank">ありのままで【Let It Go】 / M8ウインドオーケストラ</a>
+                </div>
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=PyZBKGJ8kkM" target="_blank">チャンパカーナ / M8ウインドオーケストラ</a>
+                </div>
+              </div>
+              <div class="group">
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=tjQIq8tuHHc" target="_blank">組曲「万象の中へ」1.龍の目覚め / Weed Wind Orchestra</a>
+                </div>
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=dU7G3hOe__s" target="_blank">組曲「万象の中へ」2.憂いの湖 / Weed Wind Orchestra</a>
+                </div>
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=m7Y_LmUmV88" target="_blank">組曲「万象の中へ」3.地気の鼓動 / Weed Wind Orchestra</a>
+                </div>
+                <div class="item">
+                  <a href="https://www.youtube.com/watch?v=ea4Mi9pPn_o" target="_blank">組曲「万象の中へ」4.青嵐 / Weed Wind Orchestra</a>
+                </div>
+              </div>
+              <div class="group">
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/nm6512450" target="_blank">吹奏楽のための民話 / V★P吹奏楽団（PCのみ視聴可能）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/nm4433164" target="_blank">K点を越えて / V★P吹奏楽団（PCのみ視聴可能）</a>
+                </div>
+                <div class="item">
+                  <a href="http://www.nicovideo.jp/watch/nm4433324" target="_blank">CENTURIA / V★P吹奏楽団（PCのみ視聴可能）</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./js/bundle.js"></script>
   </body>

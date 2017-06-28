@@ -1,9 +1,6 @@
-html {
-  font-family: "Mplus 1p";
-}
-
-#js_select,
-#js_engineer_detail ,
-#js_musician_detail {
-  display: none;
-}
+@import 'base/_reset.scss';
+@import 'base/_variable.scss';
+@import 'base/_mixin.scss';
+@import 'base/_base.scss';
+@import 'layouts/**';
+@import 'modules/**';
