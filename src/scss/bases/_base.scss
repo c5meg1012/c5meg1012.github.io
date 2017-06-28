@@ -1,6 +1,14 @@
+html,body {
+  height: 100%;
+}
+
 html {
   font-family: "Mplus 1p";
   font-size: $font_size_md;
+}
+
+body {
+  position: relative;
 }
 
 img {
