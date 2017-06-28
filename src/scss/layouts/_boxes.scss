@@ -1,0 +1,28 @@
+.l_boxes {
+  > .box {
+    margin-bottom: 2.5rem;
+
+    @include max-screen($break_point) {
+      padding: 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .box_header {
+    margin-bottom: 1.5rem;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: .75rem;
+
+      @include max-screen($break_point) {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+      }
+    }
+
+    .title_sub {
+    }
+  }
+}

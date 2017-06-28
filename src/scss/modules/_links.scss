@@ -1,0 +1,56 @@
+.m_links {
+  > .item {
+    display: inline-block;
+    margin-right: .5rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $white;
+    font-weight: 700;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: .7;
+      transition: all .4s;
+    }
+
+    @include max-screen($break_point) {
+      padding: .75rem;
+      margin-bottom: .75rem;
+    }
+  }
+
+  .facebook {
+    background-color: #405a93;
+  }
+
+  .twitter {
+    background-color: #1da1f2;
+  }
+
+  .github {
+    background-color: $black;
+  }
+
+  .hatena {
+    background-color: #008fde;
+  }
+
+  .instagram {
+    background-color: #ff1493;
+  }
+
+  .fa {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: .25rem;
+
+    @include max-screen($break_point) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.m_detail_header {
+  margin-bottom: 2.5rem;
+
+  @include max-screen($break_point) {
+    margin-bottom: 1rem;
+  }
+}

@@ -2,3 +2,14 @@
 #js_musician_detail {
   display: none;
 }
+
+.l_detail {
+  > .inner {
+    width: 850px;
+    margin: 0 auto;
+
+    @include max-screen($break_point) {
+      width: 100%;
+    }
+  }
+}

@@ -57,8 +57,27 @@ strong {
   font-weight: 700;
 }
 
+.l_boxes > .box {
+  margin-bottom: 2.5rem;
+}
+
+.l_boxes .box_header {
+  margin-bottom: 1.5rem;
+}
+
+.l_boxes .box_header .title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
 #js_engineer_detail,#js_musician_detail {
   display: none;
+}
+
+.l_detail > .inner {
+  width: 850px;
+  margin: 0 auto;
 }
 
 .l_select {
@@ -84,7 +103,22 @@ strong {
 .l_sign svg {
   position: absolute;
   top: 50%;
-  margin-top: -182px;
+  margin-top: -20%;
+}
+
+.m_back .button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 5px 0px #ccc;
+}
+
+.m_back .button:hover {
+  opacity: .65;
+  background-color: rgba(204, 204, 204, 0.6);
+  transition: all .4s;
+  cursor: pointer;
 }
 
 .m_button_box {
@@ -96,6 +130,56 @@ strong {
 .m_button_box > .item {
   margin-bottom: 2rem;
   margin-right: 3px;
+}
+
+.m_detail_header {
+  margin-bottom: 2.5rem;
+}
+
+.m_links > .item {
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.m_links a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.m_links a:hover {
+  opacity: .7;
+  transition: all .4s;
+}
+
+.m_links .facebook {
+  background-color: #405a93;
+}
+
+.m_links .twitter {
+  background-color: #1da1f2;
+}
+
+.m_links .github {
+  background-color: #000;
+}
+
+.m_links .hatena {
+  background-color: #008fde;
+}
+
+.m_links .instagram {
+  background-color: #ff1493;
+}
+
+.m_links .fa {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: .25rem;
 }
 
 .m_select_button {
@@ -134,10 +218,47 @@ strong {
   font-size: 2.5rem;
 }
 
+.m_sentence {
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.m_sentence p {
+  margin: 1.25rem 0;
+}
+
+.m_sentence p:first-child {
+  margin-top: 0;
+}
+
+.m_sentence p:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 640px) {
+  .l_boxes > .box {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .l_boxes .box_header .title {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  .l_detail > .inner {
+    width: 100%;
+  }
+
   .l_select .question {
     padding-top: 3rem;
     font-size: 1.5rem;
+  }
+
+  .m_back {
+    width: 99%;
+    display: block;
+    padding: 1rem 0;
   }
 
   .m_button_box {
@@ -148,6 +269,19 @@ strong {
 
   .m_button_box > .item {
     margin-right: 0;
+  }
+
+  .m_detail_header {
+    margin-bottom: 1rem;
+  }
+
+  .m_links a {
+    padding: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  .m_links .fa {
+    font-size: 1rem;
   }
 
   .m_select_button .image {
@@ -161,5 +295,9 @@ strong {
   .m_select_button .fa {
     font-size: 1rem;
     width: 2rem;
+  }
+
+  .m_sentence {
+    font-size: 1rem;
   }
 }

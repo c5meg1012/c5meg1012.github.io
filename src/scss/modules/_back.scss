@@ -1,0 +1,22 @@
+.m_back {
+  .button {
+    display: inline-block;;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 3px solid $black;
+    box-shadow: 3px 3px 5px 0px $gray;
+
+    &:hover {
+      opacity: .65;
+      background-color: rgba($gray, .6);
+      transition: all .4s;
+      cursor: pointer;
+    }
+  }
+
+  @include max-screen($break_point) {
+    width: 99%;
+    display: block;
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,20 @@
+.m_sentence {
+  line-height: 1.5;
+  font-size: 1.25rem;
+
+  @include max-screen($break_point) {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 1.25rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
