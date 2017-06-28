@@ -3,5 +3,13 @@
 
   .question {
     font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 3rem 0;
+
+    @include max-screen($break_point) {
+      padding-top: 3rem;
+      font-size: 1.5rem;
+    }
   }
 }

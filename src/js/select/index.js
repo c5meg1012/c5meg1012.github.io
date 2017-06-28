@@ -13,13 +13,13 @@ export default class Select {
       $.when(
         this.select.fadeOut()
       ).done (() => {
-        this.showMeru(e.target);
+        this.showMeru(e.currentTarget);
       });
     });
   }
 
-  showMeru(target) {
-    if ($(target).hasClass('js_select_engineer')) {
+  showMeru(currentTarget) {
+    if ($(currentTarget).hasClass('js_select_engineer')) {
       this.engineerDetail.fadeIn();
     } else {
       this.musicianDetail.fadeIn();

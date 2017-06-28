@@ -1,0 +1,20 @@
+.m_button_box {
+  width: 680px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include max-screen($break_point) {
+    width: 100%;
+    padding: 0 .75rem;
+    box-sizing: border-box;
+  }
+
+  > .item {
+    margin-bottom: 2rem;
+    margin-right: 3px;
+
+    @include max-screen($break_point) {
+      margin-right: 0;
+    }
+  }
+}

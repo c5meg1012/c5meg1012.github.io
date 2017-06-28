@@ -11204,14 +11204,14 @@ var Select = function () {
 
       this.selectButton.on('click', function (e) {
         $.when(_this.select.fadeOut()).done(function () {
-          _this.showMeru(e.target);
+          _this.showMeru(e.currentTarget);
         });
       });
     }
   }, {
     key: 'showMeru',
-    value: function showMeru(target) {
-      if ($(target).hasClass('js_select_engineer')) {
+    value: function showMeru(currentTarget) {
+      if ($(currentTarget).hasClass('js_select_engineer')) {
         this.engineerDetail.fadeIn();
       } else {
         this.musicianDetail.fadeIn();
