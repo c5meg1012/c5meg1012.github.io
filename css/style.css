@@ -176,6 +176,10 @@ strong {
   background-color: #ff1493;
 }
 
+.m_links .mail {
+  background-color: #ccc;
+}
+
 .m_links .fa {
   font-size: 1.5rem;
   vertical-align: middle;
