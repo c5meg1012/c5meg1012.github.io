@@ -4,7 +4,7 @@
     <title>About Meru</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
   <body>
@@ -104,13 +104,16 @@
               <div class="m_sentence">
                 <p>
                   たった3人だった少数精鋭の会社に飛び込み、2人目のエンジニアとして入社。<br />
-                  Ruby on Railsで、フロント側の実装とデザインを中心に担当する一方、サーバーサイドでも新機能まるごと一人で担当するなど、自社サービスの開発を行った。
+                  Ruby on Railsで、いわゆるアルバイト検索サイトのような求人広告サービスの開発に携わり、後半は新規サービスの開発を行っていました。
                 </p>
                 <p>
-                  フロント側では、各種Lintを導入し、構築当時のままで運用のしにくかったCSSの設計をやり直して、適宜リファクタリング。また、CoffeeScript環境から、Webpacker + ES2016環境へのリプレースも行った。<br />
+                  基本的にはインフラ構築以外のほぼ全ての工程に携わり、UI/UXまわりのデザインから、企画、開発等をしていました。<br />
+                  フロントエンドでは実装だけではなく、SMACCSを取り入れるための大規模なリファクタリングやコンポーネントの再定義を行いました。<br />
+                  また、lintを入れるなどしてメンテナンス性を高めたり、Sprockets + CoffeeScriptから<a href="https://blog.rista.jp/entry/2017/09/27/103715" target="_blank">Webpacker + ES2015への完全移行</a>も行いました。<br />
+                  一方で、ユーザー数を伸ばすためにGoogle Analyticsを用いたABテストや、ユーザーテストツールの動画を用いたサービス改善も行いました。
                 </p>
                 <p>
-                  UI/UX改善活動では、データをGoogle Analyticsで取りながら、ABテスト等を行い、CV率を当初の6倍くらいまで引き上げた。
+                  <a href="https://blog.rista.jp/archive/author/c5meg1012" target="_blank">会社ブログで執筆した記事はこちら</a>
                 </p>
               </div>
             </div>
@@ -123,9 +126,66 @@
             </div>
             <div class="box_body">
               <div class="m_sentence">
+                <p><strong>【プロジェクト1】</strong></p>
                 <p>
-                  Ruby on Rails、Vue.jsを用いた、新規サービスの開発をしている。<br />
-                  バックエンド・フロントエンド両方を担当。
+                  クリエイターや社内の編集スタッフが動画に使う素材の管理システムを開発しました。<br />
+                  自社の素材提供と、APIで取ってきた他社の素材提供、契約している素材ツールへの導線の提供を行っています。
+                </p>
+                <p>
+                  本システムでは、ユーザー管理、音源素材の提供、ダウンロード履歴管理をメインとした初期構築を担当しました。<br />
+                  移行前のシステムがあったのですが、動画編集の部署からUX面で高評価を受けることができました。<br />
+                  プロジェクト体制としては、PM、エンジニア2名、デザイナー1名です。インフラ構築と技術メンターのようなメンバーが別途おりましたが、基本は自分がメインエンジニアとして技術面を仕切っていきました。
+                </p>
+                <p>
+                  当時はクリエイター情報が登録されているシステムがビジネス上の都合で2つに分かれており、本システムでは両者に対応した認証クライアントを作成しました。<br />
+                  本システムはRailsですが、認証プロバイダとなっているシステムはそれぞれSymfony、Laravelだったため、両システムのコードや、クライアント側のOAuthライブラリのコードを読んだりしながら丁寧に進めることを意識しました。
+                </p>
+                <p>
+                  また、当時社内のシステムはすべてVue.jsで動いていたのですが、webpackを使わずに直接読み込んでいました。<br />
+                  そのため、本システムでは社内で初めてwebpackerを導入しました。webpackerにした理由は、社内のエンジニアにゼネラリストタイプが多く、フロントエンドの細かいところまで世話できそうなエンジニアが多くなかったことと、そこに集中できるリソースの余裕もなかったことがあります。<br />
+                  webpackerはその前の会社でも導入したことがある一方、Docker環境への導入は初めてでしたが、比較的スムーズに導入できました。
+                </p>
+                <p>
+                  このプロジェクトでは、業務未経験のエンジニア1名、フルスクラッチコーディング未経験のデザイナー1名のサポートも行いました。<br />
+                  業務未経験のエンジニアはスキル面はそれほど問題なかったので、PRベースの開発フローやPMとのコミュニケーションに重きを置いてサポートし、通常のプロジェクトなら1人で回せるようになってもらうことができました。
+                </p>
+                <p>
+                  フルスクラッチコーディング未経験のデザイナーには、破綻しにくいCSSを書いてもらうために、コードレビューを通して(厳格すぎない程度ではありますが)コンポーネントベースの設計を教えました。<br />
+                  最初はコーディングに対してネガティブなイメージをもっていたようですが、綺麗なコードを書けることが楽しく感じてもらえるようになりました。
+                </p>
+                <p>
+                  両者に共通しますが、テキストばかりだと伝わらないこともあるので、コードレビューだけにとどまらず、フランクなSlackや直接のコミュニケーションを通して積極的に声かけをし、メンバーと一緒に考えていくようにしていました。
+                </p>
+                <p><strong>【プロジェクト2】</strong></p>
+                <p>
+                  このシステムは、スプレッドシートで管理していたクリエイター情報マスタの移行プロジェクトでした。
+                  他にも社内にはクリエイター情報管理システムがありましたが、一部の審査基準を満たしたクリエイターだけのシステムだったり、育成対象のクリエイターだけのシステムだったりしたので、それらに散在するクリエイター情報をまとめる、会社の中心となるシステムでした。
+                </p>
+                <p>
+                  本件はディレクション業務が中心となりましたが、技術的な所では、同一ドメインで共有されたcookieを用いたログイン基盤の開発や、初期構築でViewにロジックがかなり入っていた部分へのdecoratorの導入、各システム間の通信に用いるREST APIの機能開発、内製の別システムとのembulkによるデータベース同期の開発などを行いました。
+                </p>
+                <p>
+                  当初はこのシステムにおけるクリエイターのログイン基盤の開発担当をしていましたが、そもそもメイン機能であるクリエイターのデータを入力・インポートする機能開発が難航しており、途中でログイン基盤の開発を進めることができなくなりました。<br />
+                  しばらく様子を見ていると、スケジュールやスコープの設定、ユースケースへの配慮などがされないまま、たくさんの機能が実装され続けていることに気づきました。<br />
+                  他の内製システムとの機能連携が多いうえ、リソースが少ない中すべてを同時並行で開発をすすめていたため、本システムは他プロジェクトのボトルネックになっていました。
+                </p>
+                <p>
+                  そこで、他のプロジェクトと連携している(支払いや、クリエイターの審査など)ドメイン領域ごとに臨時でプロジェクトを立ち上げ、他のプロジェクトのディレクターに主導権を握ってもらうことにしました。<br />
+                  こうしてスケジュールが立てられ開発が進みましたが、<!-- 臨時プロジェクトの調整業務に自分も参加することになったため、開発リソースが足りなくなりました。<br />
+                  また、 -->本システムのデータ構造と、連携先のデータ構造が違うなど、互いのシステムに関する情報が共有しきれていないことにも気づきました。
+                </p>
+                <p>
+                  それを受けて、取り急ぎコードレビューにおけるプロジェクトごとの壁をなくし、本システムのコードを把握してもらえる仕組みを作りました。<br />
+                  <!-- 今後はエンジニアを数名採用できたタイミングでメンバーのアサイン変更も行い、連携しているシステムのメンバーを兼務で集める予定です。<br /> -->
+                  こうして、臨時のプロジェクト単位の機能ごとに、システムを少しずつリリースして運用に乗せていくことができました。
+                </p>
+                <!-- <p><strong>【その他】</strong></p>
+                <p>
+                  チームメンバーの評価方法が曖昧だったので、メンバーの意見と会社全体の行動規範をもとに、エンジニアチーム向けの行動規範を作成しました。<br />
+                  また、仕事のできる年長者に仕事が集中しすぎてボトルネックになっていたので、各役職・ポジションの役割を定義し、各役職の範囲を明らかに超えているものに関して整理をしました。
+                </p> -->
+                <p>
+                  <a href="http://system.blog.uuum.jp/archive/author/c5meg1012" target="_blank">会社ブログで執筆した記事はこちら</a>
                 </p>
               </div>
             </div>
@@ -138,7 +198,7 @@
             <div class="box_body">
               <div class="m_sentence">
                 <p>
-                  Ruby on Rails / CSS3 / JavaScript / Vue.js / Laravel / Wordpress / Photoshop / Illustrator ...and more.
+                  Ruby on Rails / CSS3 / JavaScript / Vue.js / Laravel / Photoshop / Illustrator / AWS ...and more.
                 </p>
               </div>
             </div>
@@ -157,15 +217,6 @@
                   <div class="item">
                     <a href="http://c5meru.hatenablog.jp/entry/2017/12/06/234213" target="_blank">Rails Developers Meetup 特別編 に行って、「あの」伊藤さんとお話をさせていただいた</a>
                   </div>
-                  <div class="item">
-                    <a href="http://c5meru.hatenablog.jp/entry/2018/02/22/004458" target="_blank">内定を辞退してTwitterで転職活動をしました</a>
-                  </div>
-                  <div class="item">
-                    <a href="http://c5meru.hatenablog.jp/entry/2017/12/11/001823" target="_blank">フルリモート旦那のすゝめ　〜あれから1年〜</a>
-                  </div>
-                  <div class="item">
-                    <a href="http://c5meru.hatenablog.jp/entry/2016/12/15/000448" target="_blank">フルリモート旦那のすゝめ</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -179,10 +230,13 @@
               <div class="m_list">
                 <div class="group">
                   <div class="item">
-                    <a href="https://speakerdeck.com/c5meg1012/2ren-mu-falseenziniatositebentiyaniru-she-sitegan-zitakoto" target="_blank">2人目のエンジニアとしてベンチャーに入社して感じたこと</a>
+                    <a href="https://speakerdeck.com/c5meg1012/2ren-mu-falseenziniatositebentiyaniru-she-sitegan-zitakoto" target="_blank">2人目のエンジニアとしてベンチャーに入社して感じたこと＠TECHPLAY女子部LT会</a>
                   </div>
                   <div class="item">
-                    <a href="https://speakerdeck.com/c5meg1012/just-decaffeinated" target="_blank">Just decaffeinated !</a>
+                    <a href="https://speakerdeck.com/c5meg1012/just-decaffeinated" target="_blank">Just decaffeinated!＠だいたい新卒エンジニア技術交流会LT</a>
+                  </div>
+                  <div class="item">
+                    <a href="https://slides.com/c5meru/the-history-of-uuum-architecture" target="_blank">The History of UUUM Architecture＠Women who code Lightning Talk</a>
                   </div>
                 </div>
               </div>
@@ -200,7 +254,13 @@
                     <a href="https://github.com/vuejs-jp/home" target="_blank">Vue.js 日本ユーザーグループ</a>
                   </div>
                   <div class="item">
-                    主に公式開催される勉強会のスタッフをしています。
+                    <a href="https://vuejs-meetup.connpass.com/" target="_blank">Vue.js Meetup スタッフ</a>
+                  </div>
+                  <div class="item">
+                    <a href="https://vuefes.jp/" target="_blank">Vue Fes Japan 2018 スタッフ</a>
+                  </div>
+                  <div class="item">
+                    <a href="https://gihyo.jp/book/2018/978-4-297-10091-9" target="_blank">『Vue.js入門 基礎から実践アプリケーション開発まで』レビュー</a>
                   </div>
                 </div>
               </div>

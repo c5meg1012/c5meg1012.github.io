@@ -40,7 +40,7 @@ html,body {
 }
 
 html {
-  font-family: "Mplus 1p";
+  font-family: "M PLUS 1p";
   font-size: 16px;
 }
 
@@ -266,6 +266,15 @@ strong {
 
 .m_sentence p:last-child {
   margin-bottom: 0;
+}
+
+.m_sentence p a {
+  color: #000;
+}
+
+.m_sentence p a:hover {
+  opacity: .5;
+  transition: all .4s;
 }
 
 @media screen and (max-width: 640px) {

@@ -16,5 +16,14 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    a {
+      color: $black;
+
+      &:hover {
+        opacity: .5;
+        transition: all .4s;
+      }
+    }
   }
 }
